@@ -37,13 +37,6 @@
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-//This function updates the value of the interval label with current value of the interval
-//slider. No longer used, intervalSlider was switched to be a text field with name
-//intervalText.
-- (void)updateInterval: (UISlider*)slide {
-	//[intervalLabel setText: [NSString stringWithFormat:@"%d", (int)[intervalSlider value]]];
-};
-///////////////////////////////////////////////////////////////////////////////////////////
 //This function initializes a time view controller and sets the managed object context
 //appropriately.
 - (void)startTimer{
@@ -64,7 +57,6 @@
   [timeController setInterval:[self getInterval]];
   [timeController setTrialNum:[[self getTrialName] intValue]];
   [timeController setExperimentName:[self getExperimentName]];
-  NSLog(@"%d, %d", [self getTotalDuration], [self getInterval]);
 
   [timeController release];
 };
@@ -97,17 +89,22 @@
 - (NSString*) getAddInfo {
 	return [description text];
 };
-
+///////////////////////////////////////////////////////////////////////////////////////////
+//This function checks the values contained in the text fields of this view (not including
+//the add. info field) and verifies that they are not empty, and that the interval, total
+//time and trial number are all positive integer values. If any errors are found an alert
+//is shown that presents a list of the errors that occured.
 -(IBAction) checkInput{
-  NSNumberFormatter* numChecker = [[NSNumberFormatter alloc] init];
   BOOL error = NO;
   int errCnt = 0;
   NSString* errMsg = @"The following errors were found:\n";
   UIAlertView* alert;
-  [numChecker setAllowsFloats:NO];
+  //NSPredicate was used to validate the fields that must be integers. The regex: ^[0-9]+$
+  //checks that only numeric characters are contained in the string.
   NSPredicate* isNumeric = [[NSPredicate alloc] init];
   isNumeric = [NSPredicate predicateWithFormat:@"SELF MATCHES '^[0-9]+$'"];
-  
+
+  //These statements check the text fields that are required to be filled in.
   if([[experimentName text] length] == 0){
     errMsg = [errMsg stringByAppendingFormat:
               @"%d. Experiment Name cannot be empty\n", ++errCnt];
@@ -133,6 +130,9 @@
               @"%d. Experiment Name cannot be empty\n", ++errCnt];
     error = YES;
   }
+  
+  //The following if statements use the isNumeric predicate to check the value held in the
+  //text fields.
   if(![isNumeric evaluateWithObject:[totalTimerText text]]){
     errMsg = [errMsg stringByAppendingFormat:
               @"%d. Total time field must be an integer\n", ++errCnt];
@@ -148,29 +148,15 @@
               @"%d. Trial field must be an integer.\n", ++errCnt];
     error = YES;
   }
+  
+  //If an error was found, an alert is presented with error details and return.
   if(error){
     alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
-    //[NSNumberFormatter release];
-    //[errMsg release];
-    //[alert release];
     return;
   }
-  //[NSNumberFormatter release];
-  //[errMsg release];
+  //If no error was found, call start timer.
   [self startTimer];
-}
-///////////////////////////////////////////////////////////////////////////////////////////
-//This method is called when the useTotalTime switch is toggled. If its value is NO then 
-//the switch that controls the on screen display of the total time is disabled. Otherwise
-//it will enable the switch for use. This function is not used in the current version.
--(IBAction) disableTotalTimeDisplaySwitch{
-  if([self getUseTotalTime] == NO){
-    totalTimeDisplaySwitch.on = NO;
-    [totalTimeDisplaySwitch setEnabled:NO];
-  } else{
-    [totalTimeDisplaySwitch setEnabled:YES];
-  }
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
 //Pop to the main menu.

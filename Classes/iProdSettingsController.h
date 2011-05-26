@@ -42,8 +42,6 @@
 
 //Method to hide keyboard when finished.
 - (IBAction)hideKeyboard: (UITextField*)text;
-//Method to update interval of passed in UISlider.
-- (IBAction)updateInterval: (UISlider*)slide;
 //Method to push the next view controller onto stack.
 - (void)startTimer;
 //Method to return the contents of the description text field.
@@ -64,8 +62,6 @@
 - (int) getTotalDuration;
 //Method to return value of the interval to use in seconds.
 - (int) getInterval;
-
--(IBAction) disableTotalTimeDisplaySwitch;
 //Method to go to the main menu view.
 -(IBAction) goToMain;
 //Method to check the textfield input of the view.
