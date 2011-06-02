@@ -19,6 +19,7 @@
 //These functions push the proper View Controller onto the navigation stack.
 -(IBAction) showSettings;
 -(IBAction) showTable;
+-(IBAction) showAbout;
 @property (nonatomic, retain) UIButton *runTrial;
 @property (nonatomic, retain) UIButton *sendEmail;
 

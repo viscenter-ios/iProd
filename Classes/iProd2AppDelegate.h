@@ -16,6 +16,7 @@
 #import "MainMenu.h"
 #import "Experiment.h"
 #import "ExpSelViewController.h"
+#import "AboutVC.h"
 
 @class iProdSettingsController;
 @class iProdTimerController;

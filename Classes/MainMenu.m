@@ -38,6 +38,13 @@
   [settings release];
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
+//Push an instance of the About view onto the nav controller stack.
+-(IBAction) showAbout
+{
+  AboutVC *about = [[AboutVC alloc] init];
+  [self.navigationController pushViewController:about animated:YES];
+}
+///////////////////////////////////////////////////////////////////////////////////////////
 //Create an instance of the experiment selector view controller, set its managed object
 //context, and then push it onto the nav controller.
 -(IBAction)showTable{

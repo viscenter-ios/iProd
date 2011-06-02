@@ -27,6 +27,8 @@
 		D082C0F0134DFA2600E12DC8 /* ExpSelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D082C0EE134DFA2600E12DC8 /* ExpSelViewController.xib */; };
 		D099EAF6134E52190032908D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D099EAF5134E52190032908D /* MessageUI.framework */; };
 		D099EB22134E544A0032908D /* EmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D099EB20134E544A0032908D /* EmailViewController.xib */; };
+		D0DDE6B513982B550097DBAC /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DDE6B313982B550097DBAC /* AboutVC.m */; };
+		D0DDE6B613982B550097DBAC /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0DDE6B413982B550097DBAC /* AboutVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,9 @@
 		D082C0EE134DFA2600E12DC8 /* ExpSelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ExpSelViewController.xib; path = Classes/ExpSelViewController.xib; sourceTree = "<group>"; };
 		D099EAF5134E52190032908D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D099EB20134E544A0032908D /* EmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EmailViewController.xib; path = Classes/EmailViewController.xib; sourceTree = "<group>"; };
+		D0DDE6B213982B550097DBAC /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
+		D0DDE6B313982B550097DBAC /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
+		D0DDE6B413982B550097DBAC /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutVC.xib; path = Classes/AboutVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,8 @@
 				D0467AEE134113A70031CAAB /* MainMenu.m */,
 				D082C0EC134DFA2600E12DC8 /* ExpSelViewController.h */,
 				D082C0ED134DFA2600E12DC8 /* ExpSelViewController.m */,
+				D0DDE6B213982B550097DBAC /* AboutVC.h */,
+				D0DDE6B313982B550097DBAC /* AboutVC.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -127,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D045C25C13404DC10066D875 /* iProdSettings.xib */,
+				D0DDE6B413982B550097DBAC /* AboutVC.xib */,
 				D099EB20134E544A0032908D /* EmailViewController.xib */,
 				D082C0EE134DFA2600E12DC8 /* ExpSelViewController.xib */,
 				D0467AEF134113A70031CAAB /* MainMenu.xib */,
@@ -207,6 +215,7 @@
 				D05E138B1345349800B9B767 /* ExperimentTable.xib in Resources */,
 				D082C0F0134DFA2600E12DC8 /* ExpSelViewController.xib in Resources */,
 				D099EB22134E544A0032908D /* EmailViewController.xib in Resources */,
+				D0DDE6B613982B550097DBAC /* AboutVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +234,7 @@
 				D045C27C13404F1D0066D875 /* Experiment.m in Sources */,
 				D0467AF0134113A70031CAAB /* MainMenu.m in Sources */,
 				D082C0EF134DFA2600E12DC8 /* ExpSelViewController.m in Sources */,
+				D0DDE6B513982B550097DBAC /* AboutVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
