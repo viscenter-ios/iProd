@@ -18,7 +18,6 @@
 	UITextField *description;   //additional information
 
   UITextField *totalTimerText;//text field for total duration
-  //UISlider *intervalSlider;   //slider for interval to test replaced with UITextField
   UITextField *intervalText;
 	UILabel *dateTimeLabel;     //label for timestamp
 	UILabel *intervalLabel;     //label for interval to test
@@ -31,7 +30,6 @@
 @property (nonatomic,retain) IBOutlet UITextField *subjectName;
 @property (nonatomic,retain) IBOutlet UITextField *trialName;
 @property (nonatomic,retain) IBOutlet UITextField *description;
-//@property (nonatomic,retain) IBOutlet UISlider *intervalSlider;
 @property (nonatomic,retain) IBOutlet UILabel *dateTimeLabel;
 @property (nonatomic,retain) IBOutlet UILabel *intervalLabel;
 @property (nonatomic,retain) IBOutlet UISwitch *intervalDisplaySwitch;

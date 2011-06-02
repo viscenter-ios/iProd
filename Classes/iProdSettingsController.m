@@ -101,8 +101,7 @@
   UIAlertView* alert;
   //NSPredicate was used to validate the fields that must be integers. The regex: ^[0-9]+$
   //checks that only numeric characters are contained in the string.
-  NSPredicate* isNumeric = [[NSPredicate alloc] init];
-  isNumeric = [NSPredicate predicateWithFormat:@"SELF MATCHES '^[0-9]+$'"];
+  NSPredicate* isNumeric = [NSPredicate predicateWithFormat:@"SELF MATCHES '^[0-9]+$'"];
 
   //These statements check the text fields that are required to be filled in.
   if([[experimentName text] length] == 0){
@@ -153,6 +152,7 @@
   if(error){
     alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
+    [alert release];
     return;
   }
   //If no error was found, call start timer.

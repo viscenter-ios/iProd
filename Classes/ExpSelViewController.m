@@ -220,6 +220,7 @@
   [controller addAttachmentData:fileData mimeType:@"text/csv" fileName:csvFileName];
   [self presentModalViewController:controller animated:YES];
   
+  [formatter release];
   [controller release];
 }
 ///////////////////////////////////////////////////////////////////////////////////////////

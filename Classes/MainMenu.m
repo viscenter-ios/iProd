@@ -32,9 +32,10 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
 //Push an instance of the settings controller onto nav controller stack.
 -(IBAction)showSettings{
+  iProdSettingsController *settings = [[iProdSettingsController alloc] init];
   [self.navigationController 
-      pushViewController:[[iProdSettingsController alloc] init]
-      animated:YES];
+      pushViewController:settings animated:YES];
+  [settings release];
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
 //Create an instance of the experiment selector view controller, set its managed object
@@ -45,6 +46,7 @@
 	tableController.managedObjectContext = [(iProd2AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
 	
     [self.navigationController pushViewController:tableController animated:YES];
+  [tableController release];
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
 -(void) viewWillAppear:(BOOL)animated{

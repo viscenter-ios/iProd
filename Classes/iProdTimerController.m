@@ -247,6 +247,7 @@
 		[goToMain setHidden:FALSE];
 		[nextButton setHidden:FALSE];
 		[stopTrial setHidden:TRUE];
+    [formatter release];
 	} else {}
 	
 }
