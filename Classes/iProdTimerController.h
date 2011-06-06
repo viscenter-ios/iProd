@@ -37,12 +37,14 @@
 	NSTimer *totalDurationTimer;
 	NSMutableArray *intervals;
 	NSManagedObjectContext *managedObjectContext;
-
+  IBOutlet UIImageView *bgImage;
   //These members form a small state machine that controls the flow of this view.
 	bool timerIsRunning;
 	bool finishedTest;
 	bool nextTrialFlag;
 }
+
+@property (nonatomic, retain) IBOutlet UIImageView *bgImage;
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSTimer *totalDurationTimer;

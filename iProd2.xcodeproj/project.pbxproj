@@ -26,7 +26,8 @@
 		D082C0EF134DFA2600E12DC8 /* ExpSelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D082C0ED134DFA2600E12DC8 /* ExpSelViewController.m */; };
 		D082C0F0134DFA2600E12DC8 /* ExpSelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D082C0EE134DFA2600E12DC8 /* ExpSelViewController.xib */; };
 		D099EAF6134E52190032908D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D099EAF5134E52190032908D /* MessageUI.framework */; };
-		D099EB22134E544A0032908D /* EmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D099EB20134E544A0032908D /* EmailViewController.xib */; };
+		D0CAD63B139D67E600D6366F /* Timer_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CAD639139D67E600D6366F /* Timer_BG.png */; };
+		D0CAD63C139D67E600D6366F /* Vis_Center_ICON.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CAD63A139D67E600D6366F /* Vis_Center_ICON.png */; };
 		D0DDE6B513982B550097DBAC /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DDE6B313982B550097DBAC /* AboutVC.m */; };
 		D0DDE6B613982B550097DBAC /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0DDE6B413982B550097DBAC /* AboutVC.xib */; };
 /* End PBXBuildFile section */
@@ -60,7 +61,8 @@
 		D082C0ED134DFA2600E12DC8 /* ExpSelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpSelViewController.m; sourceTree = "<group>"; };
 		D082C0EE134DFA2600E12DC8 /* ExpSelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ExpSelViewController.xib; path = Classes/ExpSelViewController.xib; sourceTree = "<group>"; };
 		D099EAF5134E52190032908D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		D099EB20134E544A0032908D /* EmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EmailViewController.xib; path = Classes/EmailViewController.xib; sourceTree = "<group>"; };
+		D0CAD639139D67E600D6366F /* Timer_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Timer_BG.png; path = ../../../Downloads/Timer_BG.png; sourceTree = "<group>"; };
+		D0CAD63A139D67E600D6366F /* Vis_Center_ICON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Vis_Center_ICON.png; path = ../../../Downloads/Vis_Center_ICON.png; sourceTree = "<group>"; };
 		D0DDE6B213982B550097DBAC /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
 		D0DDE6B313982B550097DBAC /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
 		D0DDE6B413982B550097DBAC /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutVC.xib; path = Classes/AboutVC.xib; sourceTree = "<group>"; };
@@ -133,9 +135,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0CAD639139D67E600D6366F /* Timer_BG.png */,
+				D0CAD63A139D67E600D6366F /* Vis_Center_ICON.png */,
 				D045C25C13404DC10066D875 /* iProdSettings.xib */,
 				D0DDE6B413982B550097DBAC /* AboutVC.xib */,
-				D099EB20134E544A0032908D /* EmailViewController.xib */,
 				D082C0EE134DFA2600E12DC8 /* ExpSelViewController.xib */,
 				D0467AEF134113A70031CAAB /* MainMenu.xib */,
 				D045C25D13404DC10066D875 /* iProdTimer.xib */,
@@ -214,8 +217,9 @@
 				D0467AF1134113A70031CAAB /* MainMenu.xib in Resources */,
 				D05E138B1345349800B9B767 /* ExperimentTable.xib in Resources */,
 				D082C0F0134DFA2600E12DC8 /* ExpSelViewController.xib in Resources */,
-				D099EB22134E544A0032908D /* EmailViewController.xib in Resources */,
 				D0DDE6B613982B550097DBAC /* AboutVC.xib in Resources */,
+				D0CAD63B139D67E600D6366F /* Timer_BG.png in Resources */,
+				D0CAD63C139D67E600D6366F /* Vis_Center_ICON.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@
 
 @implementation iProdTimerController
 
-@synthesize totalTimerLabel, timerLabel, desc, results, nextButton, goToMain, managedObjectContext, stopTrial, totalDurationTimer;
+@synthesize totalTimerLabel, timerLabel, desc, results, nextButton, goToMain, managedObjectContext, stopTrial, totalDurationTimer, bgImage;
 
 /*
  // The designated initializer.	Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -28,6 +28,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
 //This function prepares the views state when it is being opened for the first time.
 - (void)viewDidLoad {
+  [bgImage sizeToFit];
+  [self.view sendSubviewToBack:bgImage];
 	[super viewDidLoad];
 	[nextButton setHidden:TRUE];
 	[stopTrial setHidden:TRUE];
@@ -130,7 +132,11 @@
             double totalInterval = -[upperTime timeIntervalSinceNow];
             [totalTimerLabel setText:[NSString stringWithFormat:@"Total:%02d:%02d.%02d", (int)totalInterval/60, (int)totalInterval%60, (int)(totalInterval*100)%100]];
         }
-        if( interval > 0.125 ) [[self view] setBackgroundColor: [UIColor colorWithRed:0.5 green:0 blue:0 alpha:1]];
+        if( interval > 0.125 ) 
+          [[self view] setBackgroundColor: [UIColor colorWithRed:204/255.0 
+                                                           green:204/255.0
+                                                            blue:204/255.0 
+                                                           alpha:1]];
 	}
 	else {
     //this stops the timer and empties the timer label.
@@ -145,7 +151,11 @@
 //This method updates the start variable with the current time, adds it to the intervals
 //array and starts the timer if it is not allready running.
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	[[self view] setBackgroundColor: [UIColor colorWithRed:0 green:0 blue:0 alpha:1]];
+  [bgImage setHidden:YES];
+	[[self view] setBackgroundColor:[UIColor colorWithRed:102/255.0
+                                                  green:201/255.0
+                                                   blue:51/255.0
+                                                  alpha:1]];
 	start = [[NSDate date] retain];
 	[intervals addObject:start];
 	if( !timerIsRunning && !finishedTest) [self startTimer];
@@ -154,7 +164,8 @@
 //This function is called after a touch has ended, did not use in the current
 //implementation except for writing to stdout.
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-//	[[self view] setBackgroundColor: [UIColor colorWithRed:0.5 green:0 blue:0 alpha:1]];
+  [bgImage setHidden:NO];
+  //	[[self view] setBackgroundColor: [UIColor colorWithRed:0.5 green:0 blue:0 alpha:1]];
 	NSLog(@"touchesEnded\n");
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
