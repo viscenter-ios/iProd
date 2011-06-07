@@ -137,6 +137,10 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="289843101">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">Timer_BG.png</string>
+						</object>
 					</object>
 					<object class="IBUILabel" id="106174738">
 						<reference key="NSNextResponder" ref="287300675"/>
@@ -171,7 +175,6 @@
 						<string key="NSFrame">{{20, 407}, {280, 37}}</string>
 						<reference key="NSSuperview" ref="287300675"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
@@ -189,6 +192,7 @@
 							<bytes key="NSRGB">MC40IDAuNzg4MjM1Mjk0MSAwLjIAA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="199968822"/>
+						<reference key="IBUINormalBackgroundImage" ref="289843101"/>
 					</object>
 					<object class="IBUIButton" id="702538964">
 						<reference key="NSNextResponder" ref="287300675"/>
@@ -214,6 +218,7 @@
 							<bytes key="NSRGB">MC40IDAuNzg4MjM1Mjk0MSAwLjIAA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="199968822"/>
+						<reference key="IBUINormalBackgroundImage" ref="289843101"/>
 					</object>
 					<object class="IBUILabel" id="710625042">
 						<reference key="NSNextResponder" ref="287300675"/>
@@ -264,10 +269,7 @@
 						<reference key="NSNextKeyView" ref="502302212"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage" id="98701220">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">Timer_BG.png</string>
-						</object>
+						<reference key="IBUIImage" ref="289843101"/>
 					</object>
 				</object>
 				<string key="NSFrameSize">{320, 480}</string>
@@ -284,13 +286,12 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIImageView" id="437826308">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<string key="NSFrameSize">{340, 480}</string>
-				<reference key="NSSuperview"/>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="98701220"/>
+				<reference key="IBUIImage" ref="289843101"/>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -423,13 +424,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="899398693"/>
 							<reference ref="389174826"/>
-							<reference ref="1067642969"/>
 							<reference ref="702538964"/>
 							<reference ref="710625042"/>
 							<reference ref="106174738"/>
 							<reference ref="36267376"/>
 							<reference ref="502302212"/>
 							<reference ref="717900230"/>
+							<reference ref="1067642969"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>

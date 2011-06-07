@@ -10,7 +10,7 @@
 #import "iProd2AppDelegate.h"
 
 @implementation MainMenu
-@synthesize runTrial, sendEmail;
+@synthesize runTrial, sendEmail, bgImage;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -24,8 +24,11 @@
 */
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-//When the main menu loads we set the Nav bar to hidden.
+//When the main menu loads we set the Nav bar to hidden. We also set the bgImage to fill 
+//the screen properly.
 - (void)viewDidLoad {
+  [bgImage sizeToFit];
+  [self.view sendSubviewToBack:bgImage];
   [super viewDidLoad];
 	[self.navigationController setNavigationBarHidden: TRUE];
 }

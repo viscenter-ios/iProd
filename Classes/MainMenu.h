@@ -15,6 +15,7 @@
 @interface MainMenu : UIViewController {
   UIButton *runTrial;
   UIButton *sendEmail;
+  IBOutlet UIImageView *bgImage;
 }
 //These functions push the proper View Controller onto the navigation stack.
 -(IBAction) showSettings;
@@ -22,5 +23,6 @@
 -(IBAction) showAbout;
 @property (nonatomic, retain) UIButton *runTrial;
 @property (nonatomic, retain) UIButton *sendEmail;
+@property (nonatomic, retain) IBOutlet UIImageView *bgImage;
 
 @end

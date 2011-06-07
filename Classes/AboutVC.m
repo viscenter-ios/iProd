@@ -10,7 +10,7 @@
 
 
 @implementation AboutVC
-
+@synthesize bgImage,aboutWebView;
 -(IBAction) goToMain
 {
   [self.navigationController popToRootViewControllerAnimated:YES];
@@ -38,11 +38,21 @@
 }
 
 #pragma mark - View lifecycle
-
+///////////////////////////////////////////////////////////////////////////////////////////
+//When the view loads the background image in the xib is fitted to the page, then the
+//information from the web is presented in the UIWebView found in this view.
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+  [super viewDidLoad];
+  [bgImage sizeToFit];
+  [self.view sendSubviewToBack:bgImage];
+  NSString *address = ABOUT_ADDRESS;
+  NSURL *url = [NSURL URLWithString:address];
+  NSURLRequest *request = [NSURLRequest requestWithURL:url];
+  [aboutWebView loadRequest:request];
+  [aboutWebView setBackgroundColor:[UIColor clearColor]];
+  [aboutWebView setOpaque:NO];
+  
 }
 
 - (void)viewDidUnload

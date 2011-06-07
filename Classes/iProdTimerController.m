@@ -27,6 +27,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 //This function prepares the views state when it is being opened for the first time.
+//The bgImage UIImageView from the xib is resized to fill the view.
 - (void)viewDidLoad {
   [bgImage sizeToFit];
   [self.view sendSubviewToBack:bgImage];
