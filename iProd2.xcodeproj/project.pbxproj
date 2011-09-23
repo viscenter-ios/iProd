@@ -26,6 +26,8 @@
 		D082C0EF134DFA2600E12DC8 /* ExpSelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D082C0ED134DFA2600E12DC8 /* ExpSelViewController.m */; };
 		D082C0F0134DFA2600E12DC8 /* ExpSelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D082C0EE134DFA2600E12DC8 /* ExpSelViewController.xib */; };
 		D099EAF6134E52190032908D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D099EAF5134E52190032908D /* MessageUI.framework */; };
+		D0CAD63B139D67E600D6366F /* Timer_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CAD639139D67E600D6366F /* Timer_BG.png */; };
+		D0CAD63C139D67E600D6366F /* Vis_Center_ICON.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CAD63A139D67E600D6366F /* Vis_Center_ICON.png */; };
 		D0DDE6B513982B550097DBAC /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DDE6B313982B550097DBAC /* AboutVC.m */; };
 		D0DDE6B613982B550097DBAC /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0DDE6B413982B550097DBAC /* AboutVC.xib */; };
 /* End PBXBuildFile section */
@@ -37,7 +39,7 @@
 		1D6058910D05DD3D006BFB54 /* VTB: Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VTB: Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28C3AD890F43EF2300507BA6 /* iProd2.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = iProd2.xcdatamodel; sourceTree = "<group>"; };
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,23 +47,25 @@
 		8D1107310486CEB800E47090 /* iProd2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iProd2-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D045C25813404D720066D875 /* iProdTimerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iProdTimerController.h; sourceTree = "<group>"; };
 		D045C25913404D720066D875 /* iProdTimerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iProdTimerController.m; sourceTree = "<group>"; };
-		D045C25C13404DC10066D875 /* iProdSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = iProdSettings.xib; path = ../iProdSettings.xib; sourceTree = "<group>"; };
-		D045C25D13404DC10066D875 /* iProdTimer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = iProdTimer.xib; path = ../iProdTimer.xib; sourceTree = "<group>"; };
+		D045C25C13404DC10066D875 /* iProdSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iProdSettings.xib; sourceTree = "<group>"; };
+		D045C25D13404DC10066D875 /* iProdTimer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iProdTimer.xib; sourceTree = "<group>"; };
 		D045C26313404E2C0066D875 /* iProdSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iProdSettingsController.h; sourceTree = "<group>"; };
 		D045C26413404E2C0066D875 /* iProdSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iProdSettingsController.m; sourceTree = "<group>"; };
 		D045C27A13404F1D0066D875 /* Experiment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Experiment.h; sourceTree = "<group>"; };
 		D045C27B13404F1D0066D875 /* Experiment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Experiment.m; sourceTree = "<group>"; };
 		D0467AED134113A70031CAAB /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		D0467AEE134113A70031CAAB /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
-		D0467AEF134113A70031CAAB /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		D0467AEF134113A70031CAAB /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = Classes/MainMenu.xib; sourceTree = "<group>"; };
 		D05E138A1345349800B9B767 /* ExperimentTable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperimentTable.xib; sourceTree = "<group>"; };
 		D082C0EC134DFA2600E12DC8 /* ExpSelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpSelViewController.h; sourceTree = "<group>"; };
 		D082C0ED134DFA2600E12DC8 /* ExpSelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpSelViewController.m; sourceTree = "<group>"; };
-		D082C0EE134DFA2600E12DC8 /* ExpSelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpSelViewController.xib; sourceTree = "<group>"; };
+		D082C0EE134DFA2600E12DC8 /* ExpSelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ExpSelViewController.xib; path = Classes/ExpSelViewController.xib; sourceTree = "<group>"; };
 		D099EAF5134E52190032908D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D0CAD639139D67E600D6366F /* Timer_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_BG.png; sourceTree = "<group>"; };
+		D0CAD63A139D67E600D6366F /* Vis_Center_ICON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vis_Center_ICON.png; sourceTree = "<group>"; };
 		D0DDE6B213982B550097DBAC /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
 		D0DDE6B313982B550097DBAC /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
-		D0DDE6B413982B550097DBAC /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
+		D0DDE6B413982B550097DBAC /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutVC.xib; path = Classes/AboutVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,22 +87,16 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				1D3623240D0F684500981E51 /* iProd2AppDelegate.h */,
-				1D3623250D0F684500981E51 /* iProd2AppDelegate.m */,
-				D045C25C13404DC10066D875 /* iProdSettings.xib */,
 				D045C26313404E2C0066D875 /* iProdSettingsController.h */,
 				D045C26413404E2C0066D875 /* iProdSettingsController.m */,
-				D045C25D13404DC10066D875 /* iProdTimer.xib */,
 				D045C25813404D720066D875 /* iProdTimerController.h */,
 				D045C25913404D720066D875 /* iProdTimerController.m */,
-				D0467AEF134113A70031CAAB /* MainMenu.xib */,
+				1D3623240D0F684500981E51 /* iProd2AppDelegate.h */,
+				1D3623250D0F684500981E51 /* iProd2AppDelegate.m */,
 				D0467AED134113A70031CAAB /* MainMenu.h */,
 				D0467AEE134113A70031CAAB /* MainMenu.m */,
-				D082C0EE134DFA2600E12DC8 /* ExpSelViewController.xib */,
 				D082C0EC134DFA2600E12DC8 /* ExpSelViewController.h */,
 				D082C0ED134DFA2600E12DC8 /* ExpSelViewController.m */,
-				D0DDE6B413982B550097DBAC /* AboutVC.xib */,
 				D0DDE6B213982B550097DBAC /* AboutVC.h */,
 				D0DDE6B313982B550097DBAC /* AboutVC.m */,
 			);
@@ -137,9 +135,17 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D05E138A1345349800B9B767 /* ExperimentTable.xib */,
+				D0CAD639139D67E600D6366F /* Timer_BG.png */,
+				D0CAD63A139D67E600D6366F /* Vis_Center_ICON.png */,
+				D045C25C13404DC10066D875 /* iProdSettings.xib */,
+				D0DDE6B413982B550097DBAC /* AboutVC.xib */,
+				D082C0EE134DFA2600E12DC8 /* ExpSelViewController.xib */,
+				D0467AEF134113A70031CAAB /* MainMenu.xib */,
+				D045C25D13404DC10066D875 /* iProdTimer.xib */,
 				2819305F112F816700ECF9B4 /* iProd2.xcdatamodeld */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* iProd2-Info.plist */,
+				D05E138A1345349800B9B767 /* ExperimentTable.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -181,9 +187,6 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0420;
-			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iProd2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -215,6 +218,8 @@
 				D05E138B1345349800B9B767 /* ExperimentTable.xib in Resources */,
 				D082C0F0134DFA2600E12DC8 /* ExpSelViewController.xib in Resources */,
 				D0DDE6B613982B550097DBAC /* AboutVC.xib in Resources */,
+				D0CAD63B139D67E600D6366F /* Timer_BG.png in Resources */,
+				D0CAD63C139D67E600D6366F /* Vis_Center_ICON.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +255,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iProd2_Prefix.pch;
 				INFOPLIST_FILE = "iProd2-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "VTB: Time";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -264,7 +269,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iProd2_Prefix.pch;
 				INFOPLIST_FILE = "iProd2-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "VTB: Time";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -279,6 +284,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -292,6 +298,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Release;

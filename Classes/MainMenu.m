@@ -10,68 +10,83 @@
 #import "iProd2AppDelegate.h"
 
 @implementation MainMenu
+@synthesize runTrial, sendEmail, bgImage;
 
+// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+/*
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization.
+    }
+    return self;
+}
+*/
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-    //Initialization for when the view loads
+//When the main menu loads we set the Nav bar to hidden. We also set the bgImage to fill 
+//the screen properly.
 - (void)viewDidLoad {
-    self.title = @"Main Menu";
-    [super viewDidLoad];
+  [bgImage sizeToFit];
+  [self.view sendSubviewToBack:bgImage];
+  [super viewDidLoad];
+	[self.navigationController setNavigationBarHidden: TRUE];
 }
-//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
-
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////
-    //Push an instance of the settings controller onto the nav controller stack.
+//Push an instance of the settings controller onto nav controller stack.
 -(IBAction)showSettings{
-    iProdSettingsController *settings = [[iProdSettingsController alloc] init];
-    [self.navigationController pushViewController:settings animated:YES];
-    [settings release];
+  iProdSettingsController *settings = [[iProdSettingsController alloc] init];
+  [self.navigationController 
+      pushViewController:settings animated:YES];
+  [settings release];
 }
-//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
-
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////
-    //Push an instance of the About view onto the nav controller stack.
--(IBAction) showAbout{
+//Push an instance of the About view onto the nav controller stack.
+-(IBAction) showAbout
+{
   AboutVC *about = [[AboutVC alloc] init];
   [self.navigationController pushViewController:about animated:YES];
 }
-//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
-
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////
-    //Create an instance of the experiment selector view controller, set its managed object context, and then push it onto the nav controller.
+//Create an instance of the experiment selector view controller, set its managed object
+//context, and then push it onto the nav controller.
 -(IBAction)showTable{
 	ExpSelViewController *tableController = [[ExpSelViewController alloc] init];
+    
 	tableController.managedObjectContext = [(iProd2AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
 	
     [self.navigationController pushViewController:tableController animated:YES];
-    [tableController release];
+  [tableController release];
 }
-//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+///////////////////////////////////////////////////////////////////////////////////////////
+-(void) viewWillAppear:(BOOL)animated{
+	[self.navigationController setNavigationBarHidden: TRUE];
+}	
+/*
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations.
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+*/
 
-
-
-
-///////////////////////////////////////////////////////////////////////////////////////////	
 - (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc. that aren't in use.
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
 }
+
 
 - (void)dealloc {
     [super dealloc];
 }
-//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+
 
 @end
