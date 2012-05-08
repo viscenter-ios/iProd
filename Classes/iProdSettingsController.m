@@ -29,11 +29,16 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	//[self updateInterval:intervalSlider];
-	time_t tt = time(NULL);
-	[dateTimeLabel setText: [NSString stringWithFormat:@"%s", ctime(&tt)]];
 	NSLog(@"ViewDidLoad");
 	UIScrollView *tempScrollView=(UIScrollView *)self.view;
   tempScrollView.contentSize=CGSizeMake(320,560);
+}
+
+// Moved some of the viewDidLoad code to here
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+	time_t tt = time(NULL);
+	[dateTimeLabel setText: [NSString stringWithFormat:@"%s", ctime(&tt)]];
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
