@@ -250,7 +250,7 @@
     //These blocks prepare the data for presentation through the view.
     //printResults is used to print the data to stdout.
     NSString *printResults = 
-    [NSString stringWithFormat:@"Total Time:\t%0.2lf\nIntervals:\t%u\nMean:\t\t%0.2lf\nError:\t\t%0.2lf\nStd Dev:\t%0.2lf\nCoeff of Var:\t%0.2lf\n",
+    [NSString stringWithFormat:@"Trial %u\nTotal Time:\t%0.2lf\nIntervals:\t%u\nMean:\t\t%0.2lf\nError:\t\t%0.2lf\nStd Dev:\t%0.2lf\nCoeff of Var:\t%0.2lf\n",trialNum,
       total, [intervals count]-1, mean, error, std, std/(total/([intervals count]-1)) ];
 		NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 		[formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss zzz"];
