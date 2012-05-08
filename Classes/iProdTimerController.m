@@ -6,6 +6,7 @@
 //	Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import <AudioToolbox/AudioToolbox.h>
 #import "iProdTimerController.h"
 #import "iProd2AppDelegate.h"
 #import "iProdSettingsController.h"
@@ -194,6 +195,8 @@
 //been pressed.
 - (void) endTrial {
 	NSLog(@"endTrial\n");
+    // Vibrate on trial end
+    AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
     //Store the true intervals in the csvIntervals string
     NSMutableString *csvIntervals = [[NSMutableString alloc] init];
   //Make sure a trial is running
