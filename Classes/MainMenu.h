@@ -10,11 +10,13 @@
 //controller for the UINavigationController inside the iProd2AppDelegate.
 
 #import <UIKit/UIKit.h>
+#import "iProd2AppDelegate.h"
 
 
 @interface MainMenu : UIViewController {
   UIButton *runTrial;
   UIButton *sendEmail;
+  iProdSettingsController *settings;
   IBOutlet UIImageView *bgImage;
 }
 //These functions push the proper View Controller onto the navigation stack.

@@ -7,7 +7,6 @@
 //
 
 #import "MainMenu.h"
-#import "iProd2AppDelegate.h"
 
 @implementation MainMenu
 @synthesize runTrial, sendEmail, bgImage;
@@ -31,14 +30,13 @@
   [self.view sendSubviewToBack:bgImage];
   [super viewDidLoad];
 	[self.navigationController setNavigationBarHidden: TRUE];
+  settings = [[iProdSettingsController alloc] init];
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
 //Push an instance of the settings controller onto nav controller stack.
 -(IBAction)showSettings{
-  iProdSettingsController *settings = [[iProdSettingsController alloc] init];
   [self.navigationController 
       pushViewController:settings animated:YES];
-  [settings release];
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
 //Push an instance of the About view onto the nav controller stack.
