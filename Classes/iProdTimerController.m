@@ -194,6 +194,8 @@
 //been pressed.
 - (void) endTrial {
 	NSLog(@"endTrial\n");
+    //Store the true intervals in the csvIntervals string
+    NSMutableString *csvIntervals = [[NSMutableString alloc] init];
   //Make sure a trial is running
 	if(timerIsRunning) {
         [totalTimerLabel setHidden:TRUE];
@@ -216,11 +218,21 @@
     //needed for calculations.
 		for( i=1, last=nil; i<[intervals count]; i++, last = next)
 		{
-			if (last == nil) last = [intervals objectAtIndex: 0];
+			if (last == nil) {
+                last = [intervals objectAtIndex: 0];
+            }
 			next = (NSDate*)[intervals objectAtIndex:i];
 			NSLog(@"%f\n", [next timeIntervalSinceDate:last]);
 			double current = [next timeIntervalSinceDate: last];
-			
+            
+            // Store the current interval in the string.
+            if(i+1 < [intervals count]) {
+                [csvIntervals appendFormat:@"%0.2lf,", current];
+            }
+            else {
+                [csvIntervals appendFormat:@"%0.2lf\n", current];
+            }
+            
 			total += current;
 			error += fabs( current - testInterval );
 		}
@@ -242,7 +254,7 @@
       total, [intervals count]-1, mean, error, std, std/(total/([intervals count]-1)) ];
 		NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 		[formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss zzz"];
-		NSString *dateString = [formatter stringFromDate:[NSDate date]];		
+		NSString *dateString = [formatter stringFromDate:[NSDate date]];
 		NSLog(@"%@\t%u\t%@\t%@", subNum,trialNum,addInfo,dateString);
 		NSLog(@"(%@)\n", printResults);
     //saveResults is the actual string that will be saved in Core Data.
@@ -254,6 +266,8 @@
 		//Change the results label.
 		[results setText: printResults];
 		[self saveTrial:saveResults];
+        //Prepend the date to the csvIntervals string, then save it
+        [self saveTrialRaw:[NSString stringWithFormat:@"%@,%@", dateString, csvIntervals]];
 		//[self printDatabase]; //this call was for early debugging.
     //finally, reconfigure our buttons.
 		[goToMain setHidden:FALSE];
@@ -308,6 +322,52 @@
   //Finally, we save our changes to the managed object context.
 	if([managedObjectContext save:&error]){
 	
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////
+//This function saves the passed in string containing the data of the experiment to Core
+//Data. The experiment name is the key used to store the string inside the database.
+- (void) saveTrialRaw: (NSString*) data {
+	NSError *error;
+    //Modify the existing experiment name 
+    NSString *modExperimentName = [NSString stringWithFormat:@"%@-Raw", experimentName];
+	NSLog(@"%@", modExperimentName);
+    //The predicate is what core data is queried with. In this case we are looking under
+    //the expName attribute for any entries that match the experiment name entered in
+    //the previous view.
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(expName matches %@)", modExperimentName];
+    //The entity is the model in core data that we are looking inside. We pass it the
+    //managed object context that was created inside the app delegate.
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Experiment" inManagedObjectContext:managedObjectContext];
+    //We create an NSFetchRequest, set its entity and predicate and finally store the
+    //the results inside an NSArray.
+	NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+	[request setEntity:entity];
+	[request setPredicate:predicate];
+	NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:request
+                                                                  error:&error];
+    //If we did not get any results from our fetch, we make a new entry
+	if([fetchedObjects count] < 1){
+        //Create a managed object to hold the new information under the current experiments
+        //name.
+		NSManagedObject *experimentObj = [NSEntityDescription insertNewObjectForEntityForName:@"Experiment" inManagedObjectContext:managedObjectContext];
+		[experimentObj setValue:modExperimentName forKey:@"expName"];
+		[experimentObj setValue:data forKey:@"dataString"];
+	}
+	else{
+        //If an entry exist for the given experiment name we simply use a for each loop to
+        //concatenate the data onto the end of the dataString attribute.
+        // I guess we do this for every object that matches the request? Seems odd -Kyle
+		for(NSManagedObject *info in fetchedObjects){
+			NSString *temp = [info valueForKey:@"dataString"];
+			NSString *newData = [NSString stringWithFormat:@"%@%@", temp, data];
+			[info setValue:newData forKey:@"dataString"];
+		}
+	}
+    
+    //Finally, we save our changes to the managed object context.
+	if([managedObjectContext save:&error]){
+        
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////

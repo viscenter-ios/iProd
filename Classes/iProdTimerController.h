@@ -35,7 +35,7 @@
 	UIButton *goToMain;
 	UIButton *stopTrial;
 	NSTimer *totalDurationTimer;
-	NSMutableArray *intervals;
+	NSMutableArray *intervals; // This is really times, not intervals
 	NSManagedObjectContext *managedObjectContext;
   IBOutlet UIImageView *bgImage;
   //These members form a small state machine that controls the flow of this view.
@@ -66,6 +66,7 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event;
 - (void)saveTrial:(NSString*) data;
+- (void)saveTrialRaw:(NSString*) data;
 - (void) printDatabase;
 - (IBAction) goToMainMenu;
 //These are the setters that are used to pass the settings from the previous controller.
