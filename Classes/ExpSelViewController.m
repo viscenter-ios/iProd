@@ -158,6 +158,7 @@
   if (cell == nil) {
     cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
   }
+    [[cell textLabel] setTextColor:[UIColor whiteColor]]; 
 	//Grab the object at the corresponding index in the fetchedResultsController.
   NSManagedObject *managedObject = 
   [fetchedResultsController objectAtIndexPath:indexPath];

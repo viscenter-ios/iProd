@@ -37,6 +37,7 @@
 @property (nonatomic,retain) IBOutlet UISwitch *useTotalTimeSwitch;
 @property (nonatomic,retain) IBOutlet UITextField *totalTimerText;
 @property (nonatomic,retain) IBOutlet UITextField *intervalText;
+@property (nonatomic,retain) IBOutlet UIScrollView *scrollView;
 
 //Method to hide keyboard when finished.
 - (IBAction)hideKeyboard: (UITextField*)text;

@@ -6,7 +6,7 @@
 //	Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import <AudioToolbox/AudioToolbox.h>
+//#import <AudioToolbox/AudioToolbox.h>
 #import "iProdTimerController.h"
 #import "iProd2AppDelegate.h"
 #import "iProdSettingsController.h"
@@ -30,8 +30,6 @@
 //This function prepares the views state when it is being opened for the first time.
 //The bgImage UIImageView from the xib is resized to fill the view.
 - (void)viewDidLoad {
-  [bgImage sizeToFit];
-  [self.view sendSubviewToBack:bgImage];
 	[super viewDidLoad];
 	[nextButton setHidden:TRUE];
 	[stopTrial setHidden:TRUE];
@@ -134,11 +132,6 @@
             double totalInterval = -[upperTime timeIntervalSinceNow];
             [totalTimerLabel setText:[NSString stringWithFormat:@"Total:%02d:%02d.%02d", (int)totalInterval/60, (int)totalInterval%60, (int)(totalInterval*100)%100]];
         }
-        if( interval > 0.125 ) 
-          [[self view] setBackgroundColor: [UIColor colorWithRed:204/255.0 
-                                                           green:204/255.0
-                                                            blue:204/255.0 
-                                                           alpha:1]];
 	}
 	else {
     //this stops the timer and empties the timer label.
@@ -154,10 +147,6 @@
 //array and starts the timer if it is not allready running.
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   [bgImage setHidden:YES];
-	[[self view] setBackgroundColor:[UIColor colorWithRed:102/255.0
-                                                  green:201/255.0
-                                                   blue:51/255.0
-                                                  alpha:1]];
 	start = [[NSDate date] retain];
 	[intervals addObject:start];
 	if( !timerIsRunning && !finishedTest) [self startTimer];
@@ -196,7 +185,7 @@
 - (void) endTrial {
 	NSLog(@"endTrial\n");
     // Vibrate on trial end
-    AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
+    //AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
     //Store the true intervals in the csvIntervals string
     NSMutableString *csvIntervals = [[NSMutableString alloc] init];
   //Make sure a trial is running
@@ -265,7 +254,7 @@
 								 subNum, trialNum, total, [intervals count]-1, mean, error, std, std/(total/([intervals count]-1)),
 								 dateString,addInfo];
     //Print to standard out what we just saved.
-		NSLog(@"(%@)\n", saveResults);
+//		NSLog(@"(%@)\n", saveResults);
 		//Change the results label.
 		[results setText: printResults];
 		[self saveTrial:saveResults];
@@ -412,7 +401,7 @@
     subNum = val;
 }
 -(void) setAddInfo:(NSString*)val{
-  if(val != nil)
+  if(val)
     addInfo = val;
   else
     addInfo = @"";
@@ -421,7 +410,7 @@
   testInterval = val;
 }
 -(void) setExperimentName: (NSString*)val{
-  if(val != nil)
+  if(val)
     experimentName = val;
   else
     experimentName = @"";

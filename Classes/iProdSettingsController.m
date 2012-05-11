@@ -11,7 +11,7 @@
 
 @implementation iProdSettingsController
 @synthesize subjectName, trialName, description, intervalText, dateTimeLabel, intervalLabel, intervalDisplaySwitch, experimentName, totalTimerText, 
- totalTimeDisplaySwitch, useTotalTimeSwitch;
+ totalTimeDisplaySwitch, useTotalTimeSwitch, scrollView;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -30,8 +30,8 @@
 	[super viewDidLoad];
 	//[self updateInterval:intervalSlider];
 	NSLog(@"ViewDidLoad");
-	UIScrollView *tempScrollView=(UIScrollView *)self.view;
-  tempScrollView.contentSize=CGSizeMake(320,560);
+  scrollView.contentSize=CGSizeMake(320,560);
+    [self.view addSubview:scrollView];
 }
 
 // Moved some of the viewDidLoad code to here
@@ -63,7 +63,7 @@
   [timeController setTrialNum:[[self getTrialName] intValue]];
   [timeController setExperimentName:[self getExperimentName]];
 
-  [timeController release];
+//  [timeController release];
 };
 ///////////////////////////////////////////////////////////////////////////////////////////
 //These getters are for passing along the settings to the timer controller.
