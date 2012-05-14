@@ -1,0 +1,3 @@
+There is an issue where if either the experiment name or the additional info
+contains a space a NSString* apparantly evaluates to nil incorrectly, causing a
+crash.
