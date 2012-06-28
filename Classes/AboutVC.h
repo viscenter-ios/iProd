@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #define ABOUT_ADDRESS @"http://halsted.vis.uky.edu/~justin/about.html"
 
-@interface AboutVC : UIViewController {
+@interface AboutVC : UIViewController <UIWebViewDelegate> {
   IBOutlet UIImageView *bgImage;
   IBOutlet UIWebView *aboutWebView;
 }

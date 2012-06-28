@@ -18,7 +18,7 @@
 #import "ExpSelViewController.h"
 #import "AboutVC.h"
 
-@class iProdSettingsController;
+@class TempoSettingsController;
 @class iProdTimerController;
 @class MainMenu;
 @class ExperimentTableController;
@@ -27,7 +27,7 @@
   
    //These objects are not actually used. I removed them from the code
    //and it broke, so I put them back in.
-  iProdSettingsController *settingsController;  
+  TempoSettingsController *settingsController;  
   iProdTimerController *timerController;
   ExperimentTableController *tableController;
   //This is used as the root of the naviController.
@@ -46,7 +46,7 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) UINavigationController *naviController;
 @property (nonatomic, retain) IBOutlet MainMenu *startMenu;
-@property (nonatomic, retain) IBOutlet iProdSettingsController *settingsController;
+@property (nonatomic, retain) IBOutlet TempoSettingsController *settingsController;
 @property (nonatomic, retain) IBOutlet iProdTimerController *timerController;
 @property (nonatomic, retain) IBOutlet ExperimentTableController *tableController;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;

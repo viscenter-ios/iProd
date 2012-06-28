@@ -20,6 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+
     }
     return self;
 }
@@ -37,6 +38,14 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    if (navigationType == UIWebViewNavigationTypeLinkClicked) {
+        [[UIApplication sharedApplication] openURL:[request URL]];
+        return NO;
+    }
+    return YES;
+}
+
 #pragma mark - View lifecycle
 ///////////////////////////////////////////////////////////////////////////////////////////
 //When the view loads the background image in the xib is fitted to the page, then the
@@ -46,12 +55,19 @@
   [super viewDidLoad];
   [bgImage sizeToFit];
   [self.view sendSubviewToBack:bgImage];
-  NSString *address = ABOUT_ADDRESS;
-  NSURL *url = [NSURL URLWithString:address];
-  NSURLRequest *request = [NSURLRequest requestWithURL:url];
-  [aboutWebView loadRequest:request];
+  //NSString *address = ABOUT_ADDRESS;
+  //NSURL *url = [NSURL URLWithString:address];
+  //NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //[aboutWebView loadRequest:request];
+  //[aboutWebView.delegate = self];
+  aboutWebView.delegate = self;
+  [aboutWebView loadRequest:
+     [NSURLRequest requestWithURL:
+      [NSURL fileURLWithPath:
+       [[NSBundle mainBundle] pathForResource:@"about.html" ofType:nil]isDirectory:NO]]];
   [aboutWebView setBackgroundColor:[UIColor clearColor]];
   [aboutWebView setOpaque:NO];
+    
   
 }
 

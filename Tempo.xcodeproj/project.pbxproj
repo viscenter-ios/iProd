@@ -12,7 +12,6 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		272CDB61155C478E00BE8CBB /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 272CDB5E155C478D00BE8CBB /* background.png */; };
-		272CDB62155C478E00BE8CBB /* buttonDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 272CDB5F155C478D00BE8CBB /* buttonDown.png */; };
 		272CDB63155C478E00BE8CBB /* buttonUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 272CDB60155C478E00BE8CBB /* buttonUp.png */; };
 		28193060112F816700ECF9B4 /* iProd2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2819305F112F816700ECF9B4 /* iProd2.xcdatamodeld */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -31,6 +30,9 @@
 		D099EAF6134E52190032908D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D099EAF5134E52190032908D /* MessageUI.framework */; };
 		D0DDE6B513982B550097DBAC /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DDE6B313982B550097DBAC /* AboutVC.m */; };
 		D0DDE6B613982B550097DBAC /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0DDE6B413982B550097DBAC /* AboutVC.xib */; };
+		EF01EFA1158F85B1004CD169 /* TEMPO_Normal_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EF01EF9F158F85B1004CD169 /* TEMPO_Normal_icon.png */; };
+		EF01EFA2158F85B1004CD169 /* TEMPO_Retina_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EF01EFA0158F85B1004CD169 /* TEMPO_Retina_icon.png */; };
+		EF581C78159CC25E000CEDCA /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = EF581C77159CC25E000CEDCA /* about.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,15 +42,14 @@
 		1D6058910D05DD3D006BFB54 /* VTB: Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VTB: Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		272CDB5E155C478D00BE8CBB /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		272CDB5F155C478D00BE8CBB /* buttonDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonDown.png; sourceTree = "<group>"; };
 		272CDB60155C478E00BE8CBB /* buttonUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonUp.png; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28C3AD890F43EF2300507BA6 /* iProd2.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = iProd2.xcdatamodel; sourceTree = "<group>"; };
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* iProd2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iProd2_Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* iProd2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iProd2-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Tempo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tempo_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Tempo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tempo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D045C25813404D720066D875 /* iProdTimerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iProdTimerController.h; sourceTree = "<group>"; };
 		D045C25913404D720066D875 /* iProdTimerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iProdTimerController.m; sourceTree = "<group>"; };
 		D045C25C13404DC10066D875 /* iProdSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iProdSettings.xib; sourceTree = "<group>"; };
@@ -68,6 +69,9 @@
 		D0DDE6B213982B550097DBAC /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
 		D0DDE6B313982B550097DBAC /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
 		D0DDE6B413982B550097DBAC /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutVC.xib; path = Classes/AboutVC.xib; sourceTree = "<group>"; };
+		EF01EF9F158F85B1004CD169 /* TEMPO_Normal_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TEMPO_Normal_icon.png; sourceTree = "<group>"; };
+		EF01EFA0158F85B1004CD169 /* TEMPO_Retina_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TEMPO_Retina_icon.png; sourceTree = "<group>"; };
+		EF581C77159CC25E000CEDCA /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				EF01EF9F158F85B1004CD169 /* TEMPO_Normal_icon.png */,
+				EF01EFA0158F85B1004CD169 /* TEMPO_Retina_icon.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -128,7 +134,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* iProd2_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* Tempo_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -137,8 +143,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EF581C77159CC25E000CEDCA /* about.html */,
 				272CDB5E155C478D00BE8CBB /* background.png */,
-				272CDB5F155C478D00BE8CBB /* buttonDown.png */,
 				272CDB60155C478E00BE8CBB /* buttonUp.png */,
 				D045C25C13404DC10066D875 /* iProdSettings.xib */,
 				D0DDE6B413982B550097DBAC /* AboutVC.xib */,
@@ -147,7 +153,7 @@
 				D045C25D13404DC10066D875 /* iProdTimer.xib */,
 				2819305F112F816700ECF9B4 /* iProd2.xcdatamodeld */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* iProd2-Info.plist */,
+				8D1107310486CEB800E47090 /* Tempo-Info.plist */,
 				D05E138A1345349800B9B767 /* ExperimentTable.xib */,
 			);
 			name = Resources;
@@ -168,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* iProd2 */ = {
+		1D6058900D05DD3D006BFB54 /* Tempo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iProd2" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Tempo" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -180,7 +186,7 @@
 			);
 			dependencies = (
 			);
-			name = iProd2;
+			name = Tempo;
 			productName = iProd2;
 			productReference = 1D6058910D05DD3D006BFB54 /* VTB: Time.app */;
 			productType = "com.apple.product-type.application";
@@ -190,7 +196,10 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iProd2" */;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tempo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -204,7 +213,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* iProd2 */,
+				1D6058900D05DD3D006BFB54 /* Tempo */,
 			);
 		};
 /* End PBXProject section */
@@ -222,8 +231,10 @@
 				D082C0F0134DFA2600E12DC8 /* ExpSelViewController.xib in Resources */,
 				D0DDE6B613982B550097DBAC /* AboutVC.xib in Resources */,
 				272CDB61155C478E00BE8CBB /* background.png in Resources */,
-				272CDB62155C478E00BE8CBB /* buttonDown.png in Resources */,
 				272CDB63155C478E00BE8CBB /* buttonUp.png in Resources */,
+				EF01EFA1158F85B1004CD169 /* TEMPO_Normal_icon.png in Resources */,
+				EF01EFA2158F85B1004CD169 /* TEMPO_Retina_icon.png in Resources */,
+				EF581C78159CC25E000CEDCA /* about.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +264,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Univ. of KY - College of Engr - Vis Center";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = iProd2_Prefix.pch;
-				INFOPLIST_FILE = "iProd2-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				GCC_PREFIX_HEADER = Tempo_Prefix.pch;
+				INFOPLIST_FILE = "Tempo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "VTB: Time";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -269,12 +282,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Univ. of KY - College of Engr - Vis Center";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = iProd2_Prefix.pch;
-				INFOPLIST_FILE = "iProd2-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				GCC_PREFIX_HEADER = Tempo_Prefix.pch;
+				INFOPLIST_FILE = "Tempo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "VTB: Time";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -284,12 +299,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Univ. of KY - College of Engr - Vis Center";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
-				PREBINDING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -298,13 +313,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Univ. of KY - College of Engr - Vis Center";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -312,7 +327,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iProd2" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Tempo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -321,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iProd2" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tempo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

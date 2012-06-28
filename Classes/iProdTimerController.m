@@ -115,7 +115,7 @@
     timerIsRunning = true;
 	[self hideButton:nil];
 	[[UIApplication sharedApplication] setIdleTimerDisabled:YES];
-	[[UIApplication sharedApplication] setStatusBarHidden:YES];
+	[[UIApplication sharedApplication] setStatusBarHidden:NO];
 	}
 }
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -166,8 +166,8 @@
 	if(timerIsRunning) {
 		[nextButton setHidden:TRUE];
 		[goToMain setHidden:TRUE];
-		[desc setText: @"Trial running.\nPress the Home button\nor shake to exit."];
-		[[UIApplication sharedApplication] setStatusBarHidden:YES];
+		[desc setText: @"Trial running.\nShake to exit."];
+		//[[UIApplication sharedApplication] setStatusBarHidden:YES];
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -175,7 +175,7 @@
 //a duration of 3 seconds.
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
 	[stopTrial setHidden:FALSE];
-	[[UIApplication sharedApplication] setStatusBarHidden:NO];
+	//[[UIApplication sharedApplication] setStatusBarHidden:YES];
 	[desc setText: @"Click the button to end trial."];
 	[NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(hideButton:) userInfo:nil repeats:NO];
 }
