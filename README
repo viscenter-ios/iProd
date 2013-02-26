@@ -1,15 +1,7 @@
 **Vis Tempo**
-It is important to monitor the cognitive and perceptual demands of an activity to determine whether the activity leaves
-the person performing it with the cognitive resources to be proactive and to deal with the unexpected. Asking
-individuals to perform a simultaneous secondary task assesses an individual’s cognitive reserve.  When the primary task
-requires more mental resources, secondary task performance will suffer. Thus, secondary task performance serves as a
-barometer for the pressures the primary task imposes.
+It is important to monitor the cognitive and perceptual demands of an activity to determine whether the activity leaves the person performing it with the cognitive resources to be proactive and to deal with the unexpected.  Asking individuals to perform a simultaneous secondary task assesses an individual’s cognitive reserve.  When the primary task requires more mental resources, secondary task performance will suffer.  Thus, secondary task performance serves as a barometer for the pressures the primary task imposes.
   
-Vis Tempo is a simple secondary task to assess the cognitive load of many primary tasks. Vis Tempo requires the person
-performing the primary task to also produce intervals of a consistent duration; for example, the person may say “time”
-every 9 seconds without referring to a clock. As the mental workload of the primary task increases, the length of
-produced intervals will vary more and more. The researcher using Vis Tempo can select different intervals to be produced,
-as well as different trial lengths.  The Vis Tempo app collects, calculates, and exports time-keeping data.
+Vis Tempo is a simple secondary task to assess the cognitive load of many primary tasks.   Vis Tempo requires the person performing the primary task to also produce intervals of a consistent duration; for example, the person may say “time” every 9 seconds without referring to a clock. As the mental workload of the primary task increases, the length of produced intervals will vary more and more. The researcher using Vis Tempo can select different intervals to be produced, as well as different trial lengths.  The Vis Tempo app collects, calculates, and exports time-keeping data. 
 
 **Known Issues**
 There is an issue where if either the experiment name or the additional info
